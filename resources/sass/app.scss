@@ -8,87 +8,83 @@
 @import 'bootstrap/scss/bootstrap';
 
 // Custom styles
+
 body {
-    background-color: #fbf8f4;
-    font-family: 'Georgia', serif;
-    color: #4a403a;
-}
-
-/* Links */
-a {
-    color: #b07a75;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #8f5e5a;
-}
-
-a:visited {
-    color: #b07a75;
+    background: linear-gradient(135deg, #6861e2, #7c3aed);
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    color: #1f2937;
 }
 
 /* Navbar */
 .navbar {
-    background-color: #3e3a39 !important;
+    background-color: rgba(100, 120, 253, 0.9) !important;
 }
 
 .navbar .nav-link {
-    color: #f8f4ef !important;
+    color: #f1f5f9 !important;
 }
 
 .navbar .nav-link:hover {
-    color: #e7cfc9 !important;
+    color: #c7d2fe !important;
 }
 
 /* Cards */
 .card {
     background-color: #ffffff;
-    border: 1px solid #eee5df;
-    border-radius: 18px;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.04);
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Headings */
 h1, h2, h3 {
-    color: #5e4d47;
+    color: #19173a;
     font-weight: 600;
+}
+
+/* Links */
+a {
+    color: #6366f1;
+}
+
+a:hover {
+    color: #4338ca;
 }
 
 /* Buttons */
 .btn-primary {
-    background-color: #b07a75 !important;
+    background-color: #6366f1 !important;
     border: none !important;
 }
 
 .btn-primary:hover {
-    background-color: #96635f !important;
+    background-color: #4f46e5 !important;
 }
 
 .btn-outline-primary {
-    border-color: #b07a75 !important;
-    color: #b07a75 !important;
+    border-color: #6366f1 !important;
+    color: #6366f1 !important;
 }
 
 .btn-outline-primary:hover {
-    background-color: #b07a75 !important;
+    background-color: #6366f1 !important;
     color: white !important;
 }
 
 /* Forms */
 .form-control {
-    border-radius: 12px;
-    border: 1px solid #e5dcd6;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
 }
 
 .form-control:focus {
-    border-color: #b07a75;
-    box-shadow: 0 0 0 0.2rem rgba(176, 122, 117, 0.2);
+    border-color: #6366f1;
+    box-shadow: 0 0 0 0.2rem rgba(99, 102, 241, 0.25);
 }
 
-/* Alerts */
-.alert-success {
-    background-color: #f4e9e6;
-    border-color: #e2c9c3;
-    color: #6a4e4a;
+/* Container spacing */
+.container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
