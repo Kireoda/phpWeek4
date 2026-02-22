@@ -49,6 +49,58 @@
                     <div class="card-text">
                         {!! nl2br(e($post->description)) !!}
                     </div>
+                    <h3>Comments</h3>
+
+                    <hr class="my-4">
+
+<h3 class="mb-3">Comments</h3>
+
+@forelse($post->comments as $comment)
+    <div class="card mb-3">
+        <div class="card-body">
+            <div class="d-flex justify-content-between">
+                <strong>{{ $comment->author_name }}</strong>
+                <div>
+                    <a href="{{ route('comments.edit', $comment) }}" class="btn btn-sm btn-outline-primary">Edit</a>
+
+                    <form method="POST" action="{{ route('comments.destroy', $comment) }}" class="d-inline">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-sm btn-outline-danger"
+                            onclick="return confirm('Delete this comment?')">
+                            Delete
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <p class="mt-2 mb-0">{{ $comment->content }}</p>
+        </div>
+    </div>
+@empty
+    <p class="text-muted">No comments yet.</p>
+@endforelse
+
+
+<hr class="my-4">
+
+<h4 class="mb-3">Add Comment</h4>
+
+<form method="POST" action="{{ route('comments.store') }}">
+    @csrf
+    <input type="hidden" name="post_id" value="{{ $post->id }}">
+
+    <div class="mb-3">
+        <input type="text" name="author_name" class="form-control" placeholder="Your Name" required>
+    </div>
+
+    <div class="mb-3">
+        <textarea name="content" class="form-control" rows="3" placeholder="Write your comment..." required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit Comment</button>
+</form>
+
                 </div>
             </div>
         </div>

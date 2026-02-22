@@ -39,6 +39,13 @@
                         <li class="nav-item">
                             <a class="nav-link {{ request()->routeIs('blog.*') || request()->routeIs('posts.*') ? 'active' : '' }}" href="{{ route('blog.index') }}">Blog</a>
                         </li>
+                        <li class="nav-item">
+    <a class="nav-link" href="{{ route('about') }}">About</a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link" href="{{ route('contact') }}">Contact</a>
+</li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
